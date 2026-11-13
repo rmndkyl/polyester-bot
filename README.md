@@ -72,6 +72,27 @@ Schedule daily after 07:00 UTC+7 (reset is 00:00 UTC). Randomize the minute
 (07:10–08:30 works well). To disable trading activity and keep claims only, set
 `trade.enabled = false` in config.
 
+## Screenshots
+
+Real output from a live account (13 Nov 2026) — not mockups. The account label is
+masked to `acc1` in this public repo; the unmasked copies live in the private repo.
+
+Live claim state (HTTP 200, today's rewards already credited):
+
+![status](docs/screenshots/status.png)
+
+Daily run: claim state, balance guard, paper round trips:
+
+![run](docs/screenshots/run.png)
+
+Run history read straight from `data/last-run.json` (includes `claimId` of successful claims):
+
+![history](docs/screenshots/history.png)
+
+Ed25519 signer selftest (offline, no network):
+
+![selftest](docs/screenshots/selftest.png)
+
 ## Security notes
 
 - `config.json` (key id + secret) is gitignored — never share the private key.
